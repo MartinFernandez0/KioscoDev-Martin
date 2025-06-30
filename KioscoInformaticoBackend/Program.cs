@@ -34,7 +34,7 @@ var firebaseJson = Environment.GetEnvironmentVariable("GOOGLE_CREDENTIALS");
 
 if (string.IsNullOrWhiteSpace(firebaseJson))
 {
-    throw new Exception("Falta la variable GOOGLE_CREDENTIALS");
+    throw new Exception("Falta la variable GOOGLE_CREDENTIALS - REVISAR");
 }
 
 var credential = GoogleCredential.FromJson(firebaseJson);
@@ -51,7 +51,7 @@ builder.Services.AddAuthorization();
 // ? Inicializar Firebase Admin SDK (opcional pero útil)
 FirebaseApp.Create(new AppOptions()
 {
-    Credential = GoogleCredential.FromFile("Firebase/kioscoinformatico-ff93f-firebase-adminsdk-k7aml-a7e842c94b.json")
+    Credential = GoogleCredential.FromFile("Firebase/kioscoinformatico-ff93f-firebase-adminsdk-k7aml-a7e842c94b")
 });
 
 
